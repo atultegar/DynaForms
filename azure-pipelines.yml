@@ -13,7 +13,7 @@ pool:
 variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+  buildConfiguration: 'Debug'
 
 steps:
 - task: NuGetAuthenticate@1
