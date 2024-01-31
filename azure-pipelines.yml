@@ -17,8 +17,7 @@ variables:
 
 steps:
 - task: NuGetAuthenticate@1
-  inputs:
-    nuGetServiceConnections: 'DynamoTesting'
+  displayName: 'Nuget Authenticate'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
