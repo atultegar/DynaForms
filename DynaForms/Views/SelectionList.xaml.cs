@@ -19,7 +19,7 @@ namespace DynaForms.Views
     /// <summary>
     /// Interaction logic for ListBox.xaml
     /// </summary>
-    [IsVisibleInDynamoLibrary(false)]
+    [SupressImportIntoVM]    
     public partial class SelectionList : Window
     {
         public SelectionList()

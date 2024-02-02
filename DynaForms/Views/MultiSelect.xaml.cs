@@ -20,7 +20,8 @@ namespace DynaForms.Views
     /// <summary>
     /// Interaction logic for MultiSelect.xaml
     /// </summary>
-    [IsVisibleInDynamoLibrary(false)]
+    /// 
+    [SupressImportIntoVM]    
     public partial class MultiSelect : Window
     {
         public MultiSelect()

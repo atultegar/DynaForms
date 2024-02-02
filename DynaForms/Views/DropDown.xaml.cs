@@ -19,7 +19,7 @@ namespace DynaForms.Views
     /// <summary>
     /// Interaction logic for DropDown.xaml
     /// </summary>
-    [SupressImportIntoVM]
+    [SupressImportIntoVM]    
     public partial class DropDown : Window
     {
         [IsVisibleInDynamoLibrary(false)]

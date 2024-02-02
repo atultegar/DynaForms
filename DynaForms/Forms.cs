@@ -45,7 +45,7 @@ namespace DynaForms
         {            
             SelectionList window = new SelectionList();
 
-            window.tb_1.Text = $"Select {title} from the List Box";
+            window.lbl_1.Content = $"Select {title} from the List Box";
             window.lstBox.ItemsSource = list;
 
             var res = window.ShowDialog();
@@ -68,7 +68,7 @@ namespace DynaForms
             IList<object> output = new List<object>();
             MultiSelect window = new MultiSelect();
 
-            window.tb_1.Text = $"Select {title} from left list box";
+            window.lbl_1.Content = $"Select {title} from left list box";
             
             for(int i=0; i<list.Count; i++)
             {

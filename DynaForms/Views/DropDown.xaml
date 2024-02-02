@@ -5,17 +5,18 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DynaForms.Views"
              mc:Ignorable="d" 
-             Height="150" Width="400"
+             Height="165" Width="400"
              WindowStartupLocation="CenterScreen"
              ResizeMode="NoResize"
-             Topmost="True">
+             Topmost="True"
+             Title="DynaForms">
     <Grid>
         <StackPanel>
             <Label Name="lbl_1" FontSize="12" Content="Select from dropdown" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <ComboBox Name="cb_1" Margin="10,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="370"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,10,10,10">
-                <Button Name="btn_Ok" Content="Ok" Width="75" Margin="5,5,5,5" Click="btn_Ok_Click"/>
-                <Button Name="btn_Cancel" Content="Cancel" Width="75" Margin="5,5,0,5" Click="btn_Cancel_Click"/>
+            <ComboBox Name="cb_1" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Top" Width="350"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                <Button Name="btn_Ok" Content="Ok" Width="75" Margin="5" Click="btn_Ok_Click"/>
+                <Button Name="btn_Cancel" Content="Cancel" Width="75" Margin="5" Click="btn_Cancel_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>

@@ -8,14 +8,15 @@
              Height="400" Width="400"
              WindowStartupLocation="CenterScreen"
              Topmost="True"
+             Title="DynaForms"
              ResizeMode="NoResize">
     <Grid>
         <StackPanel>
-            <TextBlock x:Name="tb_1" Margin="10,10" FontSize="12" Text="Select multiple items from the List Box"/>
-            <ListBox x:Name="lstBox" Margin="10,10" Width="Auto" Height="270" SelectionMode="Extended"/>
-            <StackPanel Orientation="Horizontal">
-                <Button x:Name="btn_Ok" Content="Ok" HorizontalAlignment="Left" Margin="210,10,0,0" Width="75" Click="btn_Ok_Click"/>
-                <Button x:Name="btn_Cancel" Content="Cancel" HorizontalAlignment="Right" Margin="20,10,0,0" Width="75" Click="btn_Cancel_Click"/>
+            <Label x:Name="lbl_1" Margin="10,10,0,0" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Select multiple items from the List Box"/>
+            <ListBox x:Name="lstBox" Margin="10,10" Width="350" Height="260" SelectionMode="Extended"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                <Button x:Name="btn_Ok" Content="Ok" HorizontalAlignment="Left" Margin="5" Width="75" Click="btn_Ok_Click"/>
+                <Button x:Name="btn_Cancel" Content="Cancel" HorizontalAlignment="Right" Margin="5" Width="75" Click="btn_Cancel_Click"/>
             </StackPanel>
         </StackPanel>            
     </Grid>

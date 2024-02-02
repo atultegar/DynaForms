@@ -5,6 +5,13 @@
 	  <UseWPF>true</UseWPF>
     <Nullable>disable</Nullable>
     <PlatformTarget>x64</PlatformTarget>
+    <Description>DynaForms is a Dynamo for Revit package used to implement WPF forms for selection of items from a list of items at runtime of Dynamo script.</Description>
+    <Copyright>Copyright 2024</Copyright>
+    <PackageProjectUrl>https://github.com/atultegar/DynamoForms</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/atultegar/DynamoForms</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Dynamo;Revit;Input;WPF</PackageTags>
+    <Title>DynaForms</Title>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,12 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Assets\icons8_down_arrow_48px.png">
+    <Resource Include="Assets\icons8_down_arrow_48px.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Assets\icons8_up_48px.png">
+    </Resource>
+    <Resource Include="Assets\icons8_up_48px.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>

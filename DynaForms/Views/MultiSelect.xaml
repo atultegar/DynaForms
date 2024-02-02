@@ -8,19 +8,20 @@
              Height="480" Width="550"
              WindowStartupLocation="CenterScreen"
              ResizeMode="NoResize"
-             Topmost="True">
+             Topmost="True"
+             Title="DynaForms">
     <Grid>
         <StackPanel>
-            <TextBlock x:Name="tb_1" Margin="20,10,0,0" FontSize="12" Text="Select multiple items from the left list box"/>
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Height="350">
-                <ListBox x:Name="lstUnselected" Margin="10" Width="200" SelectionMode="Single" MinWidth="200" MinHeight="330"/>
-                <StackPanel Orientation="Vertical" Margin="10" VerticalAlignment="Center">
-                    <Button x:Name="btnSelect" Content=">" Margin="10" Height="25" Width="50" Click="btnSelect_Click"/>
-                    <Button x:Name="btnSelectAll" Content=">>" Margin="10" Height="25" Width="50" Click="btnSelectAll_Click"/>
-                    <Button x:Name="btnDeselect" Content="&lt;" Margin="10" Height="25" Width="50" Click="btnDeselect_Click"/>
-                    <Button x:Name="btnDeselectAll" Content="&lt;&lt;" Margin="10" Height="25" Width="50" Click="btnDeselectAll_Click"/>
+            <Label x:Name="lbl_1" Margin="10,10,0,0" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Select multiple items from the left list box"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Height="330">
+                <ListBox x:Name="lstUnselected" Margin="10" Width="210" SelectionMode="Extended" />
+                <StackPanel Orientation="Vertical" Margin="5" VerticalAlignment="Center">
+                    <Button x:Name="btnSelect" Content=">" Margin="5" Height="25" Width="50" Click="btnSelect_Click"/>
+                    <Button x:Name="btnSelectAll" Content=">>" Margin="5" Height="25" Width="50" Click="btnSelectAll_Click"/>
+                    <Button x:Name="btnDeselect" Content="&lt;" Margin="5" Height="25" Width="50" Click="btnDeselect_Click"/>
+                    <Button x:Name="btnDeselectAll" Content="&lt;&lt;" Margin="5" Height="25" Width="50" Click="btnDeselectAll_Click"/>
                 </StackPanel>
-                <ListBox x:Name="lstSelected" Margin="10" Width="200" SelectionMode="Single"/>
+                <ListBox x:Name="lstSelected" Margin="10" Width="210" SelectionMode="Extended"/>
             </StackPanel>
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -28,17 +29,17 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="2" x:Name="btnMoveUp" Width="25" Height="25" Margin="10,0,0,0" HorizontalAlignment="Left" Click="btnMoveUp_Click">
+                <Button Grid.Column="2" x:Name="btnMoveUp" Width="25" Height="25" Margin="0" HorizontalAlignment="Left" Click="btnMoveUp_Click">
                     <Image Source="/DynaForms;component/Assets/icons8_up_48px.png" />
                 </Button>
-                <Button Grid.Column="2" x:Name="btnMoveDown" Width="25" Height="25" Margin="45,0,0,0" HorizontalAlignment="Left" Click="btnMoveDown_Click">
+                <Button Grid.Column="2" x:Name="btnMoveDown" Width="25" Height="25" Margin="35,0,0,0" HorizontalAlignment="Left" Click="btnMoveDown_Click">
                     <Image Source="/DynaForms;component/Assets/icons8_down_arrow_48px.png" />
                 </Button>
             </Grid>
 
-            <StackPanel Orientation="Horizontal" Margin="10,0,0,0" HorizontalAlignment="Right">
-                <Button x:Name="btnOk" Content="Ok" Margin="10" Width="75" Height="25" Click="btnOk_Click"/>
-                <Button x:Name="btnCancel" Content="Cancel" Margin="10" Width="75" Height="25" Click="btnCancel_Click"/>
+            <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Right">
+                <Button x:Name="btnOk" Content="Ok" Margin="5" Width="75" Height="25" Click="btnOk_Click"/>
+                <Button x:Name="btnCancel" Content="Cancel" Margin="5" Width="75" Height="25" Click="btnCancel_Click"/>
             </StackPanel>
         </StackPanel>  
     </Grid>
