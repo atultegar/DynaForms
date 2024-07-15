@@ -1,0 +1,86 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Color Palette-->
+    <SolidColorBrush x:Key="color1" Color="#3C3C3C"/>
+    <SolidColorBrush x:Key="color2" Color="#14213D"/>
+    <SolidColorBrush x:Key="color3" Color="#FFB703"/>
+    <SolidColorBrush x:Key="color4" Color="#E5E5E5"/>
+    <SolidColorBrush x:Key="color5" Color="#FFFFFF"/>
+
+    <!-- Define styles for Label -->
+    <Style TargetType="Label">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="15,0,0,10"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+    </Style>
+
+    <!-- Define styles for TextBox -->
+    <Style TargetType="TextBox">
+        <!--<Setter Property="Background" Value="Black"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="Gray"/>-->
+        <Setter Property="Width" Value="360"/>
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+    </Style>
+
+    <Style TargetType="ComboBox">
+        <Setter Property="Width" Value="360"/>
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+    </Style>
+    <Style TargetType="ListBox">
+        <Setter Property="Width" Value="360"/>
+        <Setter Property="Height" Value="260"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+    </Style>
+
+    <!-- Define styles for Button -->
+    <Style x:Key="normalButton" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource color3}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="100" Height="35"
+                            CornerRadius="17.5"
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource color4}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="moveButton" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource color3}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="50" Height="35"
+                        CornerRadius="17.5"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource color4}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
