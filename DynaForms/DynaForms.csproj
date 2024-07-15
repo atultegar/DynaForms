@@ -12,6 +12,9 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Dynamo;Revit;Input;WPF</PackageTags>
     <Title>DynaForms</Title>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+	  <VersionPrefix>1.1.0</VersionPrefix>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,7 +34,6 @@
   <ItemGroup>
     <PackageReference Include="DynamoVisualProgramming.DynamoServices" Version="3.0.1.7382" />
   </ItemGroup>
-
   <ItemGroup>
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>

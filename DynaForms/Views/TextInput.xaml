@@ -1,15 +1,15 @@
-﻿<Window x:Class="DynaForms.Views.DropDown"
+﻿<Window x:Class="DynaForms.Views.TextInput"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DynaForms.Views"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              Height="180" Width="400"
-             WindowStartupLocation="CenterScreen"
-             ResizeMode="NoResize"
-             Topmost="True"
-             Title="DynaForms">
+            WindowStartupLocation="CenterScreen"
+            ResizeMode="NoResize"
+            Topmost="True"
+            Title="DynaForms">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -23,10 +23,12 @@
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="55"/>
-            </Grid.RowDefinitions>
+            </Grid.RowDefinitions>            
             <StackPanel Grid.Row="1">
-                <Label Name="lbl_1" Content="Select from dropdown" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <ComboBox Name="cb_1" HorizontalAlignment="Center" VerticalAlignment="Top" />                
+                <Label x:Name="lbl_1" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <TextBlock x:Name="tb_1" Text="This is a very long label text that needs to be wrapped into multiple lines." TextWrapping="Wrap"/>
+                </Label>
+                <TextBox x:Name="txt_1" HorizontalAlignment="Center" VerticalAlignment="Top" />
             </StackPanel>
             <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
                 <StackPanel.Resources>
@@ -34,10 +36,9 @@
                         <Setter Property="Margin" Value="5,0,10,0"/>
                     </Style>
                 </StackPanel.Resources>
-                <Button Name="btn_Ok" Content="Ok" Click="btn_Ok_Click"/>
-                <Button Name="btn_Cancel" Content="Cancel" Click="btn_Cancel_Click"/>
+                <Button x:Name="btn_Ok" Content="Ok" Click="btn_Ok_Click"/>
+                <Button x:Name="btn_Cancel" Content="Cancel" Click="btn_Cancel_Click"/>
             </StackPanel>
         </Grid>
-    </Border>
-    
+    </Border>    
 </Window>

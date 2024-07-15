@@ -10,37 +10,59 @@
              ResizeMode="NoResize"
              Topmost="True"
              Title="DynaForms">
-    <Grid>
-        <StackPanel>
-            <Label x:Name="lbl_1" Margin="10,10,0,0" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Select multiple items from the left list box"/>
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Height="330">
-                <ListBox x:Name="lstUnselected" Margin="10" Width="210" SelectionMode="Extended" />
-                <StackPanel Orientation="Vertical" Margin="5" VerticalAlignment="Center">
-                    <Button x:Name="btnSelect" Content=">" Margin="5" Height="25" Width="50" Click="btnSelect_Click"/>
-                    <Button x:Name="btnSelectAll" Content=">>" Margin="5" Height="25" Width="50" Click="btnSelectAll_Click"/>
-                    <Button x:Name="btnDeselect" Content="&lt;" Margin="5" Height="25" Width="50" Click="btnDeselect_Click"/>
-                    <Button x:Name="btnDeselectAll" Content="&lt;&lt;" Margin="5" Height="25" Width="50" Click="btnDeselectAll_Click"/>
-                </StackPanel>
-                <ListBox x:Name="lstSelected" Margin="10" Width="210" SelectionMode="Extended"/>
-            </StackPanel>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Column="2" x:Name="btnMoveUp" Width="25" Height="25" Margin="0" HorizontalAlignment="Left" Click="btnMoveUp_Click">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Border Background="{StaticResource color1}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="55"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lbl_1" Grid.Row="1" Grid.ColumnSpan="3" Content="Select multiple items from the left list box"/>
+            <ListBox x:Name="lstUnselected" Grid.Row="2" Grid.Column="0" Width="220" Height="280" Margin="10" SelectionMode="Extended" />
+            <ListBox x:Name="lstSelected" Grid.Row="2" Grid.Column="2" Width="220" Height="280" Margin="10" SelectionMode="Extended"/>
+            <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal">
+                <Button x:Name="btnMoveUp" Width="25" Height="25" Margin="10,0,0,0" HorizontalAlignment="Left" Click="btnMoveUp_Click">
                     <Image Source="/DynaForms;component/Assets/icons8_up_48px.png" />
                 </Button>
-                <Button Grid.Column="2" x:Name="btnMoveDown" Width="25" Height="25" Margin="35,0,0,0" HorizontalAlignment="Left" Click="btnMoveDown_Click">
+                <Button x:Name="btnMoveDown" Width="25" Height="25" Margin="5,0,0,0" HorizontalAlignment="Left" Click="btnMoveDown_Click">
                     <Image Source="/DynaForms;component/Assets/icons8_down_arrow_48px.png" />
                 </Button>
-            </Grid>
-
-            <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Right">
-                <Button x:Name="btnOk" Content="Ok" Margin="5" Width="75" Height="25" Click="btnOk_Click"/>
-                <Button x:Name="btnCancel" Content="Cancel" Margin="5" Width="75" Height="25" Click="btnCancel_Click"/>
             </StackPanel>
-        </StackPanel>  
-    </Grid>
+            <StackPanel Grid.Row="2" Grid.Column="1" Margin="5" VerticalAlignment="Center">
+                <StackPanel.Resources>
+                    <Style TargetType="Button" BasedOn="{StaticResource moveButton}">
+                        <Setter Property="Margin" Value="0,5,0,5"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Button x:Name="btnSelect" Content=">" Click="btnSelect_Click"/>
+                <Button x:Name="btnSelectAll" Content=">>" Click="btnSelectAll_Click"/>
+                <Button x:Name="btnDeselect" Content="&lt;" Click="btnDeselect_Click"/>
+                <Button x:Name="btnDeselectAll" Content="&lt;&lt;" Click="btnDeselectAll_Click"/>
+            </StackPanel>
+            <StackPanel Grid.Row="4" Grid.ColumnSpan="3" Orientation="Horizontal" Margin="10" HorizontalAlignment="Right">
+                <StackPanel.Resources>
+                    <Style TargetType="Button" BasedOn="{StaticResource normalButton}">
+                        <Setter Property="Margin" Value="5,0,10,0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Button x:Name="btnOk" Content="Ok" Click="btnOk_Click"/>
+                <Button x:Name="btnCancel" Content="Cancel" Click="btnCancel_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+    
 </Window>

@@ -10,14 +10,33 @@
              Topmost="True"
              Title="DynaForms"
              ResizeMode="NoResize">
-    <Grid>
-        <StackPanel>
-            <Label x:Name="lbl_1" Margin="10,10,0,0" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Select multiple items from the List Box"/>
-            <ListBox x:Name="lstBox" Margin="10,10" Width="350" Height="260" SelectionMode="Extended"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
-                <Button x:Name="btn_Ok" Content="Ok" HorizontalAlignment="Left" Margin="5" Width="75" Click="btn_Ok_Click"/>
-                <Button x:Name="btn_Cancel" Content="Cancel" HorizontalAlignment="Right" Margin="5" Width="75" Click="btn_Cancel_Click"/>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Border Background="{StaticResource color1}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="55"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="1">
+                <Label x:Name="lbl_1" Content="Select multiple items from the List Box"/>
+                <ListBox x:Name="lstBox" SelectionMode="Extended"/>                
             </StackPanel>
-        </StackPanel>            
-    </Grid>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                <StackPanel.Resources>
+                    <Style TargetType="Button" BasedOn="{StaticResource normalButton}">
+                        <Setter Property="Margin" Value="5,0,10,0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Button x:Name="btn_Ok" Content="Ok" Click="btn_Ok_Click"/>
+                <Button x:Name="btn_Cancel" Content="Cancel" Click="btn_Cancel_Click"/>
+            </StackPanel>
+        </Grid>
+    </Border>    
 </Window>

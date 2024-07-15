@@ -1,6 +1,7 @@
 ﻿using DynaForms.Views;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace DynaForms
 {
@@ -83,6 +84,29 @@ namespace DynaForms
             {
                 output.Add(window.lstSelected.Items[j]);
             }
+
+            return output;
+        }
+
+        /// <summary>
+        /// Form with textbox for input
+        /// </summary>
+        /// <param name="title"></param>
+        /// <returns></returns>
+        [STAThread]
+        public static object FormTextInput(string title = "Write text")
+        {
+            object output = null;
+            TextInput window = new TextInput();
+
+            //window.lbl_1.Content = title;
+            window.tb_1.Text = title;
+
+            var res = window.ShowDialog();
+            if(res.HasValue && res.Value)
+                window.Close();
+
+            output = window.txt_1.Text;
 
             return output;
         }
