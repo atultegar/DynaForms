@@ -26,6 +26,7 @@ namespace DynaForms.Views
         public TextInput()
         {
             InitializeComponent();
+            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
         }
 
         private void btn_Ok_Click(object sender, RoutedEventArgs e)
@@ -36,6 +37,17 @@ namespace DynaForms.Views
         private void btn_Cancel_Click(object sender, RoutedEventArgs e)
         {
             DialogResult= false;
+            Close();
+        }
+
+        private void pnlControlBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
             Close();
         }
     }

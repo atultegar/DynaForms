@@ -31,7 +31,6 @@
   <ItemGroup>
     <PackageReference Include="DynamoVisualProgramming.DynamoServices" Version="3.0.1.7382" />
   </ItemGroup>
-
   <ItemGroup>
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>

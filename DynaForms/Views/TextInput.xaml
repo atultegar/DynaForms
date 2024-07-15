@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DynaForms.Views"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              Height="180" Width="400"
             WindowStartupLocation="CenterScreen"
             ResizeMode="NoResize"
@@ -23,7 +23,7 @@
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="55"/>
-            </Grid.RowDefinitions>
+            </Grid.RowDefinitions>            
             <StackPanel Grid.Row="1">
                 <Label x:Name="lbl_1" HorizontalAlignment="Left" VerticalAlignment="Top">
                     <TextBlock x:Name="tb_1" Text="This is a very long label text that needs to be wrapped into multiple lines." TextWrapping="Wrap"/>
